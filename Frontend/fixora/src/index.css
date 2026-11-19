@@ -1,0 +1,1330 @@
+@import "tailwindcss";
+/* =========================
+   GLOBAL
+========================= */
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.nav {
+    /* Space between navbar and page content */
+    margin: 18px 20px 45px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 20px;
+    color: #e5d9ff;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 40px;
+    position: relative;
+}
+
+.f-vertical,
+.f-top,
+.f-middle {
+    background: #8000ff;
+    position: absolute;
+    left: 3px;
+    border-radius: 3px;
+}
+
+.f-vertical {
+    width: 7px;
+    height: 36px;
+    top: 2px;
+}
+
+.f-top {
+    width: 25px;
+    height: 7px;
+    top: 2px;
+}
+
+.f-middle {
+    width: 19px;
+    height: 7px;
+    top: 16px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #8000ff;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 400px;
+    width: 90%;
+
+    padding: 40px;
+    margin: 30px auto;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #0a0014,
+        #18002e,
+        #000000
+    );
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #cfc3df;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 550px;
+}
+
+.service-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================
+   SEARCH FORM
+========================= */
+
+.service {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 30px;
+    margin: 10px;
+
+    border: 1px solid #6d28d9;
+    border-radius: 20px;
+
+    background: #0d0d0d;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    box-shadow: 0 0 20px rgba(109, 40, 217, 0.25);
+}
+
+.service h2 {
+    font-size: 24px;
+    color: white;
+}
+
+.service p {
+    font-size: 14px;
+    color: #b9aec7;
+    line-height: 1.5;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #e5d9ff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #3a2a4d;
+    border-radius: 10px;
+
+    background: #151515;
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8000ff;
+
+    box-shadow:
+        0 0 8px rgba(128, 0, 255, 0.3);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #756a82;
+}
+
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.search {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6d28d9;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search:hover {
+    background: #8000ff;
+    transform: translateY(-2px);
+}
+
+.search:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services-section {
+    width: 90%;
+    margin: 70px auto;
+}
+
+.services-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-heading h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.services-heading p {
+    color: #b9aec7;
+    font-size: 15px;
+}
+
+.services {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    width: 100%;
+    padding: 20px 0;
+}
+
+
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.service-card {
+    min-height: 260px;
+
+    padding: 20px;
+
+    border: 2px solid #6d28d9;
+    border-radius: 20px;
+
+    background: conic-gradient(
+        from 45deg,
+        #000000,
+        #4b0082,
+        #000000,
+        #8000ff,
+        #000000
+    );
+
+    box-shadow:
+        0 0 12px rgba(109, 40, 217, 0.2);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(109, 40, 217, 0.35);
+}
+
+
+/* =========================
+   SERVICE ICON
+========================= */
+
+.service-icon {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   SERVICE CARD CONTENT
+========================= */
+
+.service-card h2 {
+    padding: 5px;
+
+    font-size: 20px;
+
+    color: #ffffff;
+
+    font-weight: 300;
+}
+
+.service-card p {
+    padding: 3px;
+    margin: 5px;
+
+    font-size: 15px;
+
+    font-weight: 100;
+    font-style: italic;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    color: #e5d9ff;
+}
+
+
+/* =========================
+   ABOUT + WHY CHOOSE
+========================= */
+
+.about-section {
+    width: 90%;
+
+    margin: 70px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.about-content,
+.why-fixora {
+    padding: 30px;
+
+    border: 1px solid #6d28d9;
+    border-radius: 20px;
+
+    background: #0d0d0d;
+}
+
+.about-section h2 {
+    margin-bottom: 15px;
+
+    font-size: 26px;
+
+    color: white;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+
+    color: #b9aec7;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   WHY CHOOSE FIXORA
+========================= */
+
+.why-fixora ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.why-fixora li {
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #151515;
+
+    color: #e5d9ff;
+
+    transition: 0.3s;
+}
+
+.why-fixora li:hover {
+    border-left: 3px solid #8000ff;
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    /* Separate footer from the main content */
+    margin-top: 110px;
+
+    padding: 40px 8% 20px;
+
+    background: #0d0d0d;
+
+    border-top: 1px solid #6d28d9;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-brand h2 {
+    color: #e5d9ff;
+
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: #b9aec7;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #8000ff;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #2a2035;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #756a82;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   HERO TABLET / MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        flex-direction: column;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+    .hero-text,
+    .service-container {
+        width: 100%;
+    }
+
+    .hero-text {
+        padding: 10px;
+    }
+
+    .text {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+
+    .nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 15px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        width: 95%;
+
+        padding: 20px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+
+    /* Services */
+
+    .services-section {
+        width: 90%;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+
+        padding: 10px 0;
+    }
+
+
+    /* About */
+
+    .about-section {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+}
+
+.result-card {
+    position: relative;
+    box-sizing: border-box;
+    width: 240px;
+    max-width: 90%;
+    min-width: 0;
+    margin: 40px auto;
+    padding: 26px;
+
+    color: #fff;
+    background: linear-gradient(145deg, #24123f, #130b22);
+    border: 1px solid #8b5cf6;
+    border-radius: 24px 8px 24px 8px;
+
+    box-shadow: 0 10px 35px rgba(109, 40, 217, 0.25);
+    overflow-wrap: anywhere;
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card h3 {
+    margin: 0 0 22px;
+    color: #c4b5fd;
+    font-size: 20px;
+}
+
+.result-card p {
+    margin: 0 0 16px;
+    line-height: 1.8;
+}
+
+.result-card p:last-child {
+    margin-bottom: 0;
+}
+
+.result-card strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #c4b5fd;
+}
+
+.result-card.found {
+    border-color: #8b5cf6;
+}
+
+.result-card.not-found {
+    border-color: #f87171;
+}
+
+.result-card:hover {
+    box-shadow: 0 14px 40px rgba(139, 92, 246, 0.4);
+}
+
+.contact {
+    min-height: 65vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: radial-gradient(
+        circle at top,
+        rgba(124, 58, 237, 0.12),
+        transparent 60%
+    );
+}
+
+.contact-badge {
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+    transition: transform 0.3s ease;
+}
+
+.contact-badge:hover {
+    transform: translateY(-3px);
+}
+
+.contact-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: #f8fafc;
+    margin: 0 0 22px;
+    letter-spacing: -2px;
+}
+
+.contact-title span {
+    background: linear-gradient(90deg, #a78bfa, #7c3aed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact-description {
+    max-width: 650px;
+    color: #cbd5e1;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.9;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contact-title {
+        letter-spacing: -1px;
+    }
+
+    .contact-description br {
+        display: none;
+    }
+}
+/* =========================
+   ABOUT PAGE - FIXORA
+========================= */
+
+.about-page {
+    width: 100%;
+    padding: 35px 0 60px;
+    overflow: hidden;
+}
+
+.about-hero {
+    position: relative;
+    width: 90%;
+    max-width: 1050px;
+    margin: 25px auto 55px;
+    padding: 70px 35px;
+    text-align: center;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(128, 0, 255, 0.22), transparent 62%),
+        linear-gradient(145deg, #171020, #08060d);
+    box-shadow: 0 18px 50px rgba(109, 40, 217, 0.15);
+}
+
+.about-badge {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 10px 22px;
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    border-radius: 30px;
+    background: rgba(128, 0, 255, 0.13);
+    color: #c4b5fd;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-badge:hover {
+    transform: translateY(-3px);
+    background: rgba(128, 0, 255, 0.22);
+}
+
+.about-hero h1 {
+    margin-bottom: 24px;
+    color: #ffffff;
+    font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+}
+
+.about-hero h1 span {
+    background: linear-gradient(90deg, #c4b5fd, #8b5cf6, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #c4b5d4;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.9;
+}
+
+/* Mission and Vision cards */
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto 75px;
+}
+
+.about-page .about-content {
+    padding: 32px;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #171020, #0d0d0d);
+    box-shadow: 0 10px 30px rgba(109, 40, 217, 0.12);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-page .about-content:hover {
+    transform: translateY(-6px);
+    border-color: #a78bfa;
+    box-shadow: 0 16px 38px rgba(109, 40, 217, 0.22);
+}
+
+.about-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    border-radius: 17px;
+    background: rgba(128, 0, 255, 0.15);
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.about-content:hover .about-icon {
+    transform: scale(1.08) rotate(-4deg);
+}
+
+.about-page .about-content h2 {
+    margin-bottom: 14px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.about-page .about-content p {
+    margin: 0;
+    color: #c4b5d4;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Why choose Fixora */
+
+.about-why-section {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto 75px;
+}
+
+.about-section-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-small-title {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-section-heading h2 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+}
+
+.about-section-heading h2 span {
+    color: #a78bfa;
+}
+
+.about-section-heading p {
+    color: #b9aec7;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Style the existing WhyChooseFixora component */
+
+.about-why-section .why-fixora {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #171020, #0d0d0d);
+    box-shadow: 0 10px 30px rgba(109, 40, 217, 0.12);
+}
+
+.about-why-section .why-fixora h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.about-why-section .why-fixora ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.about-why-section .why-fixora li {
+    padding: 16px 18px;
+    border: 1px solid #30223f;
+    border-radius: 12px;
+    background: #15111c;
+    color: #e5d9ff;
+    line-height: 1.7;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.about-why-section .why-fixora li:hover {
+    transform: translateY(-3px);
+    border-color: #8b5cf6;
+    background: #211630;
+}
+
+/* Closing message */
+
+.about-cta {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 38px 25px;
+    text-align: center;
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    border-radius: 22px;
+    background: radial-gradient(circle at top, rgba(128, 0, 255, 0.15), transparent 75%), #0d0d0d;
+}
+
+.about-cta h2 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 750;
+}
+
+.about-cta p {
+    color: #c4b5d4;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* About page responsive layout */
+
+@media (max-width: 800px) {
+    .about-hero {
+        padding: 55px 25px;
+    }
+
+    .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-why-section .why-fixora ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-page {
+        padding-top: 15px;
+    }
+
+    .about-hero,
+    .about-content-grid,
+    .about-why-section,
+    .about-cta {
+        width: 92%;
+    }
+
+    .about-hero {
+        margin-bottom: 40px;
+        padding: 45px 20px;
+        border-radius: 20px;
+    }
+
+    .about-hero h1 {
+        letter-spacing: -0.8px;
+    }
+
+    .about-content-grid {
+        margin-bottom: 50px;
+    }
+
+    .about-page .about-content,
+    .about-why-section .why-fixora {
+        padding: 23px;
+        border-radius: 17px;
+    }
+
+    .about-why-section {
+        margin-bottom: 50px;
+    }
+
+    .about-section-heading p {
+        font-size: 14px;
+    }
+
+    .about-cta {
+        padding: 30px 20px;
+    }
+}
+
+/* =========================
+   ABOUT PAGE — MORE SPACING
+========================= */
+
+.about-page {
+    padding: 55px 0 90px;
+}
+
+/* Hero section */
+.about-hero {
+    margin: 35px auto 90px;
+    padding: 90px 45px;
+    border-radius: 32px;
+}
+
+.about-badge {
+    margin-bottom: 32px;
+    padding: 12px 25px;
+}
+
+.about-hero h1 {
+    margin-bottom: 32px;
+    line-height: 1.3;
+}
+
+.about-hero p {
+    max-width: 750px;
+    line-height: 2;
+}
+
+/* Mission and Vision cards */
+.about-content-grid {
+    gap: 35px;
+    margin-bottom: 100px;
+}
+
+.about-page .about-content {
+    padding: 45px 40px;
+    min-height: 280px;
+}
+
+.about-icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 28px;
+}
+
+.about-page .about-content h2 {
+    margin-bottom: 22px;
+}
+
+.about-page .about-content p {
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* Why Choose Fixora */
+.about-why-section {
+    margin-bottom: 100px;
+}
+
+.about-section-heading {
+    margin-bottom: 45px;
+}
+
+.about-small-title {
+    margin-bottom: 20px;
+}
+
+.about-section-heading h2 {
+    margin-bottom: 20px;
+}
+
+.about-section-heading p {
+    line-height: 1.9;
+}
+
+.about-why-section .why-fixora {
+    padding: 45px;
+}
+
+.about-why-section .why-fixora h2 {
+    margin-bottom: 30px;
+}
+
+.about-why-section .why-fixora ul {
+    gap: 22px;
+}
+
+.about-why-section .why-fixora li {
+    padding: 22px 24px;
+    line-height: 1.9;
+}
+
+/* Closing section */
+.about-cta {
+    margin-bottom: 30px;
+    padding: 60px 35px;
+    border-radius: 28px;
+}
+
+.about-cta h2 {
+    margin-bottom: 22px;
+}
+
+.about-cta p {
+    line-height: 2;
+}
+
+/* Responsive spacing */
+@media (max-width: 800px) {
+    .about-page {
+        padding: 30px 0 60px;
+    }
+
+    .about-hero {
+        margin-bottom: 60px;
+        padding: 60px 28px;
+    }
+
+    .about-content-grid {
+        gap: 25px;
+        margin-bottom: 65px;
+    }
+
+    .about-page .about-content {
+        padding: 32px;
+        min-height: auto;
+    }
+
+    .about-why-section {
+        margin-bottom: 65px;
+    }
+
+    .about-why-section .why-fixora {
+        padding: 28px;
+    }
+
+    .about-cta {
+        padding: 42px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        padding: 45px 22px;
+        margin-bottom: 45px;
+    }
+
+    .about-hero h1 {
+        line-height: 1.35;
+        letter-spacing: -0.5px;
+    }
+
+    .about-content-grid {
+        margin-bottom: 50px;
+    }
+
+    .about-page .about-content {
+        padding: 25px;
+    }
+
+    .about-why-section {
+        margin-bottom: 50px;
+    }
+
+    .about-why-section .why-fixora {
+        padding: 22px;
+    }
+
+    .about-why-section .why-fixora li {
+        padding: 18px;
+    }
+
+    .about-cta {
+        padding: 35px 20px;
+    }
+}
+
+/* =========================
+   GLOBAL PAGE SPACING FIX
+========================= */
+
+.services-section {
+    margin-top: 55px;
+    margin-bottom: 90px;
+}
+
+.about-page {
+    padding-top: 55px;
+    padding-bottom: 90px;
+}
+
+.contact {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.footer {
+    margin-top: 110px;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        margin-bottom: 32px;
+    }
+
+    .services-section {
+        margin-top: 40px;
+        margin-bottom: 65px;
+    }
+
+    .about-page {
+        padding-top: 35px;
+        padding-bottom: 60px;
+    }
+
+    .footer {
+        margin-top: 75px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav {
+        margin: 15px 15px 28px;
+    }
+
+    .services-section {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .about-page {
+        padding-top: 25px;
+        padding-bottom: 45px;
+    }
+
+    .contact {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        margin-top: 55px;
+    }
+}
+
+
+/*? Active Navbar Link */
+
+.nav-links a.isActive{
+
+    color: #a78bfa;
+    border-bottom: 2px solid #8000ff;
+    padding-bottom: 6px;
+}
+
+.nav-links a.isActive:hover{
+    color: #c4b5fd;
+}
